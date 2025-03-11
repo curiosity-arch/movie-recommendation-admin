@@ -6,7 +6,6 @@ import { Button } from "../button";
 import { updateAdmin, AdminState } from "@/app/lib/actions";
 import { useActionState } from "react";
 import styles from "@/public/styles/edit-form.module.css";
-import { error } from "console";
 
 export default function EditFormAdmin({ adminById }: { adminById: AdminId }) {
     const initialState: AdminState = { message: null, errors: {} };
