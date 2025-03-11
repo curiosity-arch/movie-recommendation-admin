@@ -1,0 +1,43 @@
+.home {
+    font-size: 18px;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.overflow {
+    overflow:auto;
+    height: 550px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+    text-align: left;
+}
+
+.th, .td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.th {
+    background-color: #858585dd;
+}
+
+.tr:nth-child(even) {
+    background-color: #8585855a;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button {
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+}
