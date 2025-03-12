@@ -6,9 +6,9 @@ import buttonSignIn from "@/public/styles/button.module.css";
 import { useActionState } from "react";
 import { authenticate } from "@/app/lib/actions";
 import { useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { useState, Suspense } from "react";
 
-export default function LoginForm() {
+function LoginFormContent() {
     const searchParams = useSearchParams();
     const callbackUrl = searchParams.get('callbackUrl') || '/admin/dashboard';
     const [errorMessage, formAction] = useActionState(
@@ -71,4 +71,12 @@ export default function LoginForm() {
             </form>
         </div>
     );
+}
+
+export default function LoginForm() {
+    return (
+        <Suspense fallback={<p>Loading...</p>}>
+            <LoginFormContent />
+        </Suspense>
+    )
 }
