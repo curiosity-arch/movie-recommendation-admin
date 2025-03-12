@@ -2,7 +2,7 @@
 
 import { z } from "zod";
 import postgres from "postgres";
-import bcrypt from 'bcrypt';
+import bcrypt from 'bcryptjs';
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { signIn } from "@/auth";
